@@ -64,6 +64,20 @@ class ItemCRUDController extends Controller
         return view('ItemCRUD.show', compact('item'));
     }
 
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $item = Item::find($id);
+
+        return view('ItemCRUD.edit', compact('item'));
+    }
+
     /**
      * Update the specified resource in storage.
      *
