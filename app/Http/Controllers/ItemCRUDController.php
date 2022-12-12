@@ -47,7 +47,7 @@ class ItemCRUDController extends Controller
 
         Item::create($request->all());
 
-        return redirect()->route('ItemCRUD.index')
+        return redirect()->route('itemCRUD.index')
             ->with('sucess', 'Item criado com sucesso');
     }
 
@@ -80,7 +80,7 @@ class ItemCRUDController extends Controller
 
         Item::find($id)->update($request->all());
 
-        return redirect()->route('ItemCRUD.index')
+        return redirect()->route('itemCRUD.index')
             ->with('success', 'Item atualizado com sucesso');
     }
 
@@ -94,7 +94,7 @@ class ItemCRUDController extends Controller
     {
         Item::find($id)->delete();
 
-        return redirect()->route('ItemCRUD.index')
+        return redirect()->route('itemCRUD.index')
             ->with('success', 'Item deletado com sucesso');
     }
 }
