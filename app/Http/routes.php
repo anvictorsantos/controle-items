@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('item', 'ItemCRUDController');
+Route::resource('item', 'ItemController');

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Item;
 
-class ItemCRUDController extends Controller
+class ItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class ItemCRUDController extends Controller
     {
         $items = Item::orderBy('id', 'DESC')->paginate(5);
 
-        return view('ItemCRUD.index', compact('items'))
+        return view('item.index', compact('items'))
             ->with('i', ($request->input('page', 1) - 1)  * 5);
     }
 
@@ -29,7 +29,7 @@ class ItemCRUDController extends Controller
      */
     public function create()
     {
-        return view('ItemCRUD.create');
+        return view('item.create');
     }
 
     /**
@@ -61,7 +61,7 @@ class ItemCRUDController extends Controller
     {
         $item = Item::find($id);
         
-        return view('ItemCRUD.show', compact('item'));
+        return view('item.show', compact('item'));
     }
 
 
@@ -75,7 +75,7 @@ class ItemCRUDController extends Controller
     {
         $item = Item::find($id);
 
-        return view('ItemCRUD.edit', compact('item'));
+        return view('item.edit', compact('item'));
     }
 
     /**
