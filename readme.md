@@ -1,7 +1,9 @@
 # laravel 5.2
 
 ## Sobre o projeto
-O projeto controle de estudantes é um projeto desenvolvido em Laravel 9 com uso de Jquery e Ajax. O projeto tem como objetivo ser uma aplicação para a criação, visualização, atualização e deleção de estudantes.
+O projeto controle de items é um projeto desenvolvido em Laravel 5.2. O projeto tem como objetivo ser uma aplicação para a criação, visualização, atualização e deleção de items.
+
+Além disso, o objetivo desse projeto é servir como base de estudos sobre o framework laravel e suas respectivas mudanças ao longo das versões. Logo, esse é o primeiro dentro de nove projetos com o mesmo intuito.
 
 ## Build setup
 ```bash
