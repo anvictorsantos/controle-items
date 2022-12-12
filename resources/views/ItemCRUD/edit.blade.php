@@ -7,7 +7,7 @@
                 <h2>Editar Item</h2>
             </div>
             <div class="pull-right">
-                <a href="{{ route('itemCRUD.index') }}" class="btn btn-success"> Voltar</a>
+                <a href="{{ route('item.index') }}" class="btn btn-success"> Voltar</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    {!! Form::model($item, ['route' => ['itemCRUD.update', $item->id], 'method' => 'PATCH']) !!}
+    {!! Form::model($item, ['route' => ['item.update', $item->id], 'method' => 'PATCH']) !!}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">

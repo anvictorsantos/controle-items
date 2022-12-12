@@ -7,7 +7,7 @@
                 <h2>Items CRUD</h2>
             </div>
             <div class="pull-right">
-                <a href="{{ route('itemCRUD.create') }}" class="btn btn-success"> Criar Novo Item</a>
+                <a href="{{ route('item.create') }}" class="btn btn-success"> Criar Novo Item</a>
             </div>
         </div>
     </div>
@@ -31,13 +31,13 @@
                 <td>{{ $item->title }}</td>
                 <td>{{ $item->description }}</td>
                 <td>
-                    <a href="{{ route('itemCRUD.show', $item->id) }}" class="btn btn-info">Visualizar</a>
-                    <a href="{{ route('itemCRUD.edit', $item->id) }}" class="btn btn-primary">Editar</a>
+                    <a href="{{ route('item.show', $item->id) }}" class="btn btn-info">Visualizar</a>
+                    <a href="{{ route('item.edit', $item->id) }}" class="btn btn-primary">Editar</a>
                     {!! Form::open(
                             [
                                 'method' => 'DELETE', 
                                 'route' => [
-                                    'itemCRUD.destroy', 
+                                    'item.destroy', 
                                     $item->id, 
                                     'style' => 'display:inline'
                                 ]

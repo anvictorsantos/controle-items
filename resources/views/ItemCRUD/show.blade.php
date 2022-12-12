@@ -7,7 +7,7 @@
                 <h2>Mostrar Item</h2>
             </div>
             <div class="pull-right">
-                <a href="{{ route('itemCRUD.index') }}" class="btn btn-success"> Voltar</a>
+                <a href="{{ route('item.index') }}" class="btn btn-success"> Voltar</a>
             </div>
         </div>
     </div>
