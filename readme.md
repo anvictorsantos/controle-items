@@ -1,27 +1,35 @@
-# Laravel PHP Framework
+# laravel 5.2
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Sobre o projeto
+O projeto controle de estudantes é um projeto desenvolvido em Laravel 9 com uso de Jquery e Ajax. O projeto tem como objetivo ser uma aplicação para a criação, visualização, atualização e deleção de estudantes.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Build setup
+```bash
+# instalar as dependências do composer
+$ composer install
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+# criar arquivo de environment
+$ cp .env.example .env
 
-## Official Documentation
+# gerar a chave única da aplicação
+$ php artisan key:generate
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+# criar as tabelas e popular com dados falsos
+$ php artisan migrate:refresh --seed
 
-## Contributing
+# inicializar a aplicação
+$ php artisan serve
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Sqlite
+Este projeto utiliza o SQLite para armazenamento, logo, as variáveis de ambiente foram alteradas com esse intuito. Se você quiser usar o mesmo banco relacional, digitar o seguinte comando:
+```bash
+# criar o arquivo de database
+$ touch database/database.sqlite
 
-## Security Vulnerabilities
+# substituir variávesi de conexão com o banco
+$ DB_CONNECTION=sqlite
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+## PHP versão
+Eu utilizei a versão 8.1 do PHP
